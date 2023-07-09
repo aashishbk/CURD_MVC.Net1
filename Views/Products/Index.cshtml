@@ -1,0 +1,43 @@
+﻿@model List<MVCCRUD.Models.Product>
+    
+
+@{
+}
+
+@using (Html.BeginForm("Search", "Product", FormMethod.Get))
+{
+    <input type="number" name="id" placeholder="Enter Product ID" required />
+    <button type="submit" class="btn btn-primary">Search</button>
+}
+
+<h1>Products</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Color</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>CategoryId</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+           <tr>
+               <td>@product.Id</td>
+               <td>@product.Name</td>
+               <td>@product.Description</td>
+               <td>@product.Color</td>
+               <td>@product.Price</td>
+               <td>@product.Image</td>
+               <td>@product.CategoryId</td>
+                <td><a href="Products/View/@product.Id">View</a></td>
+           </tr> 
+        }
+    </tbody>
+</table>
+

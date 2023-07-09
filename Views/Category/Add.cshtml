@@ -1,0 +1,32 @@
+﻿@model MVCCRUD.Models.Product
+@{
+}
+
+<form method="post" action="Add">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="int" class="form-control" asp-for="Id">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Description</label>
+        <input type="text" class="form-control" asp-for="Description">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Color</label>
+        <input type="text" class="form-control" asp-for="Color">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Price</label>
+        <input type="int" class="form-control" asp-for="Price">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Image</label>
+        <input type="image" class="form-control" asp-for="Image">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
